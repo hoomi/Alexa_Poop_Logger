@@ -7,17 +7,17 @@
     "express": "^4.16.2",
     "promise": "^8.0.1"
   },
-  "engines": {
-    "node": "8.1.1"
-  },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "keywords": [
     "alexa",
     "poop"
   ],
   "author": "Hooman Ostovari",
-  "license": "MIT"
+  "license": "MIT",
+  "engines": {
+    "node": "8.1.1"
+  }
 }
