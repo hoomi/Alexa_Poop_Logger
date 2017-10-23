@@ -1,12 +1,20 @@
-const express = require('express')
-const app = express()
+"use strict";
 
-var port = process.env.PORT || 8080;
+var Alexa = require("alexa-sdk");
 
-app.get('/', (req, res) => {
-  res.send('Hello World')
-})
+var handlers = {
+  "HelloIntent": function () {
+    this.response.speak("Hello, Codecademy"); 
+    this.emit(':responseReady');
+  },
+  "LaunchRequest": function () {
+    this.response.speak("Welcome to Codecademy"); 
+    this.emit(':responseReady');
+  }
+};
 
-app.listen(port, () => {
-  console.log("Example app listening on port 3000")
-})
+exports.handler = function(event, context, callback){
+  var alexa = Alexa.handler(event, context);
+    alexa.registerHandlers(handlers);
+    alexa.execute();
+};

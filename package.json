@@ -4,6 +4,7 @@
   "description": "It is the backend for the poop logging Alexa app",
   "main": "web.js",
   "dependencies": {
+    "alexa-sdk": "^1.0.15",
     "express": "^4.16.2",
     "promise": "^8.0.1"
   },
