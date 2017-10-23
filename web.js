@@ -1,20 +1,10 @@
-"use strict";
+'use strict';
 
-var Alexa = require("alexa-sdk");
+var AlexaAppServer = require( 'alexa-app-server' );
 
-var handlers = {
-  "HelloIntent": function () {
-    this.response.speak("Hello, Codecademy"); 
-    this.emit(':responseReady');
-  },
-  "LaunchRequest": function () {
-    this.response.speak("Welcome to Codecademy"); 
-    this.emit(':responseReady');
-  }
-};
+var server = new AlexaAppServer( {
+  httpsEnabled: false,
+  port: process.env.PORT || 3000
+} );
 
-exports.handler = function(event, context, callback){
-  var alexa = Alexa.handler(event, context);
-    alexa.registerHandlers(handlers);
-    alexa.execute();
-};
+server.start();
