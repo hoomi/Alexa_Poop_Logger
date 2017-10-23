@@ -8,6 +8,9 @@
     "promise": "^8.0.1"
   },
   "devDependencies": {},
+  "scripts": {
+    "start": "node web.js"
+  },
   "keywords": [
     "alexa",
     "poop"
