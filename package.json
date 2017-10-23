@@ -2,15 +2,12 @@
   "name": "alexa_poop_node",
   "version": "1.0.0",
   "description": "It is the backend for the poop logging Alexa app",
-  "main": "app.js",
+  "main": "web.js",
   "dependencies": {
     "express": "^4.16.2",
     "promise": "^8.0.1"
   },
   "devDependencies": {},
-  "scripts": {
-    "start": "node app.js"
-  },
   "keywords": [
     "alexa",
     "poop"
